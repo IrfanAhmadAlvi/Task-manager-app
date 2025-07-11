@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager/ui/Screens/sign_in_screen.dart';
 
 import 'ui/Screens/splash_screen.dart';
 
@@ -47,7 +48,12 @@ class _TaskManagerAppState extends State<TaskManagerApp> {
         ),
       ),
 
-      home: SplashScreen(),
+      initialRoute: '/splash',
+      routes:  {
+        '/splash': (context) => SplashScreen(),
+        '/sign-in': (context) => SignInScreen(),
+
+    },
     );
   }
 }
